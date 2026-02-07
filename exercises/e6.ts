@@ -5,7 +5,7 @@ import { Asteroid } from "../data/data";
 export function getAsteroidsDiscoveredAfterYear(
   asteroids: Asteroid[],
   year: number,
-): any {
+): Asteroid[] {
   let asteroidsAfterGivenYear: Asteroid[] = [];
   asteroids.map((asteroid: Asteroid) => {
     if (asteroid.discoveryYear > year) {
