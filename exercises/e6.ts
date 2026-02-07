@@ -1,6 +1,19 @@
 // SPACE DATA EXERCISE 6
 // Return an array with all asteroids discovered after a given year
-export function getAsteroidsDiscoveredAfterYear(asteroids, year) {}
+
+import { Asteroid } from "../data/data";
+export function getAsteroidsDiscoveredAfterYear(
+  asteroids: Asteroid[],
+  year: number,
+): any {
+  let asteroidsAfterGivenYear: Asteroid[] = [];
+  asteroids.map((asteroid: Asteroid) => {
+    if (asteroid.discoveryYear > year) {
+      asteroidsAfterGivenYear.push(asteroid);
+    }
+  });
+  return asteroidsAfterGivenYear;
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-6"
