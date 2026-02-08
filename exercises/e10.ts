@@ -2,14 +2,17 @@
 // Return a given asteroid object of data
 // make sure that you destructure your parameters
 import { AllData } from "../data/data";
+import { Asteroid } from "../data/data";
 export function getAsteroidDataByName({
   allData,
   asteroidName,
 }: {
   allData: AllData;
   asteroidName: string;
-}) {
-  return allData.asteroids.find((asteroid) => asteroid.name === asteroidName);
+}): Asteroid | undefined {
+  return allData.asteroids.find(
+    (asteroid: Asteroid) => asteroid.name === asteroidName,
+  );
 }
 
 // === TEST YOURSELF ===
