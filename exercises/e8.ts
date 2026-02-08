@@ -8,7 +8,7 @@ export function findPlanetByMoon({
 }: {
   planets: Planet[];
   moonName: string;
-}): any {
+}): Planet | undefined {
   let planetWithMoon: Planet | undefined;
   planets.forEach((planet: Planet) => {
     if (planet.moons) {
