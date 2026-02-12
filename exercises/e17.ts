@@ -1,7 +1,9 @@
-export const minBy = (array, cb) => {
+export const minBy = <Type>(array: Type[], cb: (type: Type) => Type): Type => {
   let minimum;
   for (let i = 0; i < array.length; i++) {
-    if (!minimum || cb(array[i]) < cb(minimum)) {
+    if (!minimum) {
+      minimum = array[i];
+    } else if (cb(array[i]) < cb(minimum)) {
       minimum = array[i];
     }
   }
